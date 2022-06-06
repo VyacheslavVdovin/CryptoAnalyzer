@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class CryptoAnalyzer {
-    private static final String alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя .,\":-!?";
+    private static final String alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя.,\":-!? ";
 
 //Метод шифрования текста:
     public static String encrypt(String text, int key) {
@@ -60,6 +60,7 @@ public class CryptoAnalyzer {
 
         Scanner scanner = new Scanner(System.in);
         int command = scanner.nextInt();
+        scanner.useDelimiter("\n");
         while (command != 0) {
             if (command == 1) {
                 System.out.println("Введите текст который нужно зашифровать:");
